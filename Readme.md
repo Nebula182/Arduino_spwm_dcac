@@ -25,15 +25,17 @@ the load gets alternated every 10ms.
 2. Software
 Timer1 with its output compare rigisters has been applied.
 It was initialized as a center alligned pwm.
-So we have to predefine some magic numbers
+We have to predefine some magic numbers
 to provide our bridge with pwm cycles.
 There is an array of bytes that keeps time for high and low 
-mosfet to be opened. Those registers of timer1 OCR1A and OCR1B are being 
-updated with those number from byte array.
+mosfet in each diagonal to be opened. Those registers of 
+timer1 OCR1A and OCR1B are being 
+updated with those numbers from byte array.
 
 3. Hardware
 To drive the bridge i applied two half-bridge drivers
- - IR2104. It features a dead time insertions of approx 500ns,
-Shutdown capability, and opposite signal generation so on the 
+IR2104. It features a dead time insertions of approx 500ns,
+shutdown capability, and opposite signal generation so on the 
 input it has low or high signal and on the output it has both
-Positive and negative 
+high and low. Thus it neads only to pins of timer
+to get working.
