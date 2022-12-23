@@ -23,6 +23,9 @@ Versa for a negative. So in that way the current on
 the load gets alternated every 10ms.
 
 2. Software
+The original idea and the schematics comes from site
+http://radiokot.ru and the author is константин_KoSS_89
+as he claims himself.
 Timer1 with its output compare rigisters has been applied.
 It was initialized as a center alligned pwm.
 We have to predefine some magic numbers
@@ -38,4 +41,6 @@ IR2104. It features a dead time insertions of approx 500ns,
 shutdown capability, and opposite signal generation so on the 
 input it has low or high signal and on the output it has both
 high and low. Thus it neads only to pins of timer
-to get working.
+to get working. Those generated signals are then applied
+to the 6~7 volt AC transformer (50Hz with iron core). So the secondary winding
+is outputting those 220 volts AC.
